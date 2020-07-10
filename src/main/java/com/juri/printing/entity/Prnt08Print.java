@@ -18,8 +18,8 @@ public class Prnt08Print {
 	private Long prnt08PrintId;
 	@Column(name = "PRNT08_PRINT_TYPE")
 	private String prnt08PrintType;
-	@Column(name = "PRNT08_PAGE_SIZE")
-	private String prnt08PageSize;
+	@Column(name = "PRNT08_RANGE")
+	private String prnt08Range;
 	@Column(name = "PRNT08_AMT")
 	private Integer prnt08Amt;
 	@Column(name = "PRNT08_CRT_DT", columnDefinition = "Date default getDate()")
@@ -51,12 +51,12 @@ public class Prnt08Print {
 		this.prnt08PrintType = prnt08PrintType;
 	}
 
-	public String getPrnt08PageSize() {
-		return prnt08PageSize;
+	public String getPrnt08Range() {
+		return prnt08Range;
 	}
 
-	public void setPrnt08PageSize(String prnt08PageSize) {
-		this.prnt08PageSize = prnt08PageSize;
+	public void setPrnt08Range(String prnt08Range) {
+		this.prnt08Range = prnt08Range;
 	}
 
 	public Integer getPrnt08Amt() {

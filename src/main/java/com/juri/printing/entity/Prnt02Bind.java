@@ -18,8 +18,8 @@ public class Prnt02Bind {
 	private Long prnt02BindId;
 	@Column(name = "PRNT02_BIND_TYPE")
 	private String prnt02BindType;
-	@Column(name = "PRNT02_RANGE")
-	private String prnt02Range;
+	@Column(name = "PRNT02_SIZE")
+	private String prnt02Size;
 	@Column(name = "PRNT02_AMT")
 	private Integer prnt02Amt;
 	@Column(name = "PRNT02_CRT_DT", columnDefinition = "Date default getDate()")
@@ -51,12 +51,12 @@ public class Prnt02Bind {
 		this.prnt02BindType = prnt02BindType;
 	}
 
-	public String getPrnt02Range() {
-		return prnt02Range;
+	public String getPrnt02Size() {
+		return prnt02Size;
 	}
 
-	public void setPrnt02Range(String prnt02Range) {
-		this.prnt02Range = prnt02Range;
+	public void setPrnt02Size(String prnt02Size) {
+		this.prnt02Size = prnt02Size;
 	}
 
 	public Integer getPrnt02Amt() {
