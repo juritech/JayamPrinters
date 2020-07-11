@@ -23,7 +23,7 @@ public class PaperAdminCtrl {
 		return service.getAllPaper();
 	}
 	
-	@RequestMapping(value = "/InsertPaper", method = RequestMethod.PUT)
+	@RequestMapping(value = "/InsertPaper", method = RequestMethod.POST)
 	public PaperTypeVo paperInsert(@RequestBody List<PaperTypeVo> lstVo) {
 		return service.paperInsert(lstVo);
 	}

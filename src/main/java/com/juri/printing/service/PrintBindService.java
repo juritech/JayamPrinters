@@ -74,7 +74,7 @@ private List<PrintBindVo> pojoToVo(List<Prnt02Bind> lstPojo, List<PrintBindVo> l
 			if (lstPojo != null) {
 				for (Prnt02Bind pojo : lstPojo) {
 					if ((vo.getBindType() + vo.getBindSize()).toString()
-							.equalsIgnoreCase((pojo.getPrnt02Amt().toString()))) {
+							.equalsIgnoreCase((pojo.getPrnt02BindType()+pojo.getPrnt02Size()))) {
 						sendVo.setMsg(sendVo.getMsg() + "Line No:[" + vo.getBindId() + "] is repeated in DB\n");
 						sendVo.setErrFlg(true);
 					}
