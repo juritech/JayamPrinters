@@ -8,4 +8,6 @@ import com.juri.printing.entity.Prnt02Bind;
 @Repository
 public interface Prnt02BindDao extends JpaRepository<Prnt02Bind, Integer>{
 
+	Prnt02Bind findByPrnt02BindTypeAndPrnt02Size(String bindType, String bindSize);
+
 }
