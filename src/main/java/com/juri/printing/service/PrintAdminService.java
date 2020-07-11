@@ -90,12 +90,7 @@ public class PrintAdminService {
 			List<Prnt08Print> lstPojo = new ArrayList<>();
 			for (PrintTypeVo vo : lstVo) {
 				Prnt08Print pojo = dao.findByPrnt08PrintTypeAndPrnt08Range(vo.getPrintName(), vo.getRange());
-				pojo.setPrnt08Amt(vo.getPrice());
-				pojo.setPrnt08CrtDs("SAVE");
-				pojo.setPrnt08CrtDt(new Date());
-				pojo.setPrnt08CrtUr("JURI");
-				pojo.setPrnt08PrintType(vo.getPrintName());
-				pojo.setPrnt08Range(vo.getRange());
+				pojo.setPrnt08Amt(vo.getPrice());				
 				pojo.setPrnt08UpdtDs("UPDATE");
 				pojo.setPrnt08UpdtDt(new Date());
 				pojo.setPrnt08UpdtUr("JURI");
