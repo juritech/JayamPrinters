@@ -7,14 +7,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.juri.printing.dao.Print08PrintDao;
+import com.juri.printing.dao.Prnt08PrintDao;
 import com.juri.printing.entity.Prnt08Print;
 import com.juri.printing.vo.PrintTypeVo;
 
 @Service
 public class PrintAdminService {
 	@Autowired
-	private Print08PrintDao dao;
+	private Prnt08PrintDao dao;
 
 	public List<PrintTypeVo> getAll() {
 		// TODO Auto-generated method stub

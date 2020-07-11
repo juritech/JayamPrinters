@@ -27,7 +27,7 @@ public class PrinAdmintCtrl {
 		return service.insert(lstVo);
 	}
 
-	@RequestMapping(value = "/insert", method = RequestMethod.PUT)
+	@RequestMapping(value = "/update", method = RequestMethod.PUT)
 	public PrintTypeVo update(@RequestBody List<PrintTypeVo> lstVo) {
 		return service.update(lstVo);
 	}
