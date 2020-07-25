@@ -9,6 +9,4 @@ public interface Prnt04UsrDao extends JpaRepository<Prnt04Usr, String>{
 
 	Prnt04Usr findByPrnt04UsrId(String userName);
 
-	Prnt04Usr findByPrnt01UsrNme(String userName);
-
 }

@@ -4,7 +4,7 @@ public class PaperTypeVo {
 	private int id;
 	private String paperSize;
 	private String gsm;
-	private int price;
+	private float price;
 	private boolean errFlg = false;
 	private String msg = "";
 	public int getId() {
@@ -25,10 +25,10 @@ public class PaperTypeVo {
 	public void setGsm(String gsm) {
 		this.gsm = gsm;
 	}
-	public int getPrice() {
+	public float getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
 	public boolean isErrFlg() {

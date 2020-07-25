@@ -21,7 +21,7 @@ public class Prnt02Bind {
 	@Column(name = "PRNT02_SIZE")
 	private String prnt02Size;
 	@Column(name = "PRNT02_AMT")
-	private Integer prnt02Amt;
+	private Float prnt02Amt;
 	@Column(name = "PRNT02_CRT_DT", columnDefinition = "Date default getDate()")
 	private Date prnt02CrtDt;
 	@Column(name = "PRNT02_CRT_UR")
@@ -59,11 +59,11 @@ public class Prnt02Bind {
 		this.prnt02Size = prnt02Size;
 	}
 
-	public Integer getPrnt02Amt() {
+	public Float getPrnt02Amt() {
 		return prnt02Amt;
 	}
 
-	public void setPrnt02Amt(Integer prnt02Amt) {
+	public void setPrnt02Amt(Float prnt02Amt) {
 		this.prnt02Amt = prnt02Amt;
 	}
 

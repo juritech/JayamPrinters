@@ -6,33 +6,30 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "PRNT07_BILL_DTLS")
 public class Prnt07BillDtls {
 	@Id
-	@Column(name = "PRNT07_BILL_DTLS_ID")
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long prnt07BillDtlsId;
+	@Column(name = "PRNT07_BILL_DTLS_ID")	
+	private String prnt07BillDtlsId;
 	@JoinColumn(name = "prnt05CustDtlsId")
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Prnt05CustDtls prnt05CustDtlsId;
 	@Column(name = "PRNT07_TOT_AMT")
-	private Integer prnt07TotAmt;
+	private Float prnt07TotAmt;
 	@Column(name = "PRNT07_PID_AMT")
-	private Integer prnt07PidAmt;
+	private Float prnt07PidAmt;
 	@Column(name = "PRNT07_DUE_AMT")
-	private Integer prnt07DueAmt;
+	private Float prnt07DueAmt;
 	@Column(name = "PRNT07_GST_FLG")
 	private Boolean prnt07GstFlg;
 	@Column(name = "PRNT07_GST_AMT")
-	private Integer prnt07GstAmt;
+	private Float prnt07GstAmt;
 	@Column(name = "PRNT07_CRT_DT", columnDefinition = "Date default getDate()")
 	private Date prnt07CrtDt;
 	@Column(name = "PRNT07_CRT_UR")
@@ -46,11 +43,11 @@ public class Prnt07BillDtls {
 	@Column(name = "PRNT07_UPDT_Ds")
 	private String prnt07UpdtDs;
 
-	public Long getPrnt07BillDtlsId() {
+	public String getPrnt07BillDtlsId() {
 		return prnt07BillDtlsId;
 	}
 
-	public void setPrnt07BillDtlsId(Long prnt07BillDtlsId) {
+	public void setPrnt07BillDtlsId(String prnt07BillDtlsId) {
 		this.prnt07BillDtlsId = prnt07BillDtlsId;
 	}
 
@@ -62,27 +59,27 @@ public class Prnt07BillDtls {
 		this.prnt05CustDtlsId = prnt05CustDtlsId;
 	}
 
-	public Integer getPrnt07TotAmt() {
+	public Float getPrnt07TotAmt() {
 		return prnt07TotAmt;
 	}
 
-	public void setPrnt07TotAmt(Integer prnt07TotAmt) {
+	public void setPrnt07TotAmt(Float prnt07TotAmt) {
 		this.prnt07TotAmt = prnt07TotAmt;
 	}
 
-	public Integer getPrnt07PidAmt() {
+	public Float getPrnt07PidAmt() {
 		return prnt07PidAmt;
 	}
 
-	public void setPrnt07PidAmt(Integer prnt07PidAmt) {
+	public void setPrnt07PidAmt(Float prnt07PidAmt) {
 		this.prnt07PidAmt = prnt07PidAmt;
 	}
 
-	public Integer getPrnt07DueAmt() {
+	public Float getPrnt07DueAmt() {
 		return prnt07DueAmt;
 	}
 
-	public void setPrnt07DueAmt(Integer prnt07DueAmt) {
+	public void setPrnt07DueAmt(Float prnt07DueAmt) {
 		this.prnt07DueAmt = prnt07DueAmt;
 	}
 
@@ -94,11 +91,11 @@ public class Prnt07BillDtls {
 		this.prnt07GstFlg = prnt07GstFlg;
 	}
 
-	public Integer getPrnt07GstAmt() {
+	public Float getPrnt07GstAmt() {
 		return prnt07GstAmt;
 	}
 
-	public void setPrnt07GstAmt(Integer prnt07GstAmt) {
+	public void setPrnt07GstAmt(Float prnt07GstAmt) {
 		this.prnt07GstAmt = prnt07GstAmt;
 	}
 

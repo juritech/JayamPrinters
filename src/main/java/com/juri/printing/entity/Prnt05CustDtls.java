@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -22,12 +23,14 @@ public class Prnt05CustDtls {
 	private String prnt05CustNme;
 	@Column(name = "PRNT05_CUST_ADDR")
 	private String prnt05CustAddr;
+	@Column(name = "PRNT05_CUST_GNDR")
+	private String prnt05CustGndr;
 	@Column(name = "PRNT05_CUST_PHN_NUM")
 	private String prnt05CustPhnNum;
 	@OneToMany(mappedBy = "prnt05CustDtlsId")
 	private List<Prnt06OrdDtls> lstOrdDtls;
-	@OneToMany(mappedBy = "prnt05CustDtlsId")
-	private List<Prnt07BillDtls> lstBillDtls;
+	@OneToOne(mappedBy = "prnt05CustDtlsId")
+	private Prnt07BillDtls lstBillDtls;
 	@Column(name = "PRNT05_CRT_DT", columnDefinition = "Date default getDate()")
 	private Date prnt05CrtDt;
 	@Column(name = "PRNT05_CRT_UR")
@@ -81,11 +84,11 @@ public class Prnt05CustDtls {
 		this.lstOrdDtls = lstOrdDtls;
 	}
 
-	public List<Prnt07BillDtls> getLstBillDtls() {
+	public Prnt07BillDtls getLstBillDtls() {
 		return lstBillDtls;
 	}
 
-	public void setLstBillDtls(List<Prnt07BillDtls> lstBillDtls) {
+	public void setLstBillDtls(Prnt07BillDtls lstBillDtls) {
 		this.lstBillDtls = lstBillDtls;
 	}
 
@@ -135,6 +138,14 @@ public class Prnt05CustDtls {
 
 	public void setPrnt05UpdtDs(String prnt05UpdtDs) {
 		this.prnt05UpdtDs = prnt05UpdtDs;
+	}
+
+	public String getPrnt05CustGndr() {
+		return prnt05CustGndr;
+	}
+
+	public void setPrnt05CustGndr(String prnt05CustGndr) {
+		this.prnt05CustGndr = prnt05CustGndr;
 	}
 
 }

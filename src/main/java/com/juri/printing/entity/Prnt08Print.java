@@ -21,7 +21,7 @@ public class Prnt08Print {
 	@Column(name = "PRNT08_RANGE")
 	private String prnt08Range;
 	@Column(name = "PRNT08_AMT")
-	private Integer prnt08Amt;
+	private Float prnt08Amt;
 	@Column(name = "PRNT08_CRT_DT", columnDefinition = "Date default getDate()")
 	private Date prnt08CrtDt;
 	@Column(name = "PRNT08_CRT_UR")
@@ -59,11 +59,11 @@ public class Prnt08Print {
 		this.prnt08Range = prnt08Range;
 	}
 
-	public Integer getPrnt08Amt() {
+	public Float getPrnt08Amt() {
 		return prnt08Amt;
 	}
 
-	public void setPrnt08Amt(Integer prnt08Amt) {
+	public void setPrnt08Amt(Float prnt08Amt) {
 		this.prnt08Amt = prnt08Amt;
 	}
 

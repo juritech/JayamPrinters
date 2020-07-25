@@ -21,7 +21,7 @@ public class Prnt01Page {
 	@Column(name = "PRNT01_PAGE_GSM")
 	private String prnt01PageGsm;
 	@Column(name = "PRNT01_AMT")
-	private Integer prnt01Amt;
+	private Float prnt01Amt;
 	@Column(name = "PRNT01_CRT_DT", columnDefinition = "Date default getDate()")
 	private Date prnt01CrtDt;
 	@Column(name = "PRNT01_CRT_UR")
@@ -59,11 +59,11 @@ public class Prnt01Page {
 		this.prnt01PageGsm = prnt01PageGsm;
 	}
 
-	public Integer getPrnt01Amt() {
+	public Float getPrnt01Amt() {
 		return prnt01Amt;
 	}
 
-	public void setPrnt01Amt(Integer prnt01Amt) {
+	public void setPrnt01Amt(Float prnt01Amt) {
 		this.prnt01Amt = prnt01Amt;
 	}
 
