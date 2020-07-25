@@ -4,7 +4,7 @@ public class PrintTypeVo {
 	private int id;
 	private String printName;
 	private String range;
-	private int price;
+	private float price;
 	private boolean errFlg = false;
 	private String msg = "";
 
@@ -32,11 +32,11 @@ public class PrintTypeVo {
 		this.range = range;
 	}
 
-	public int getPrice() {
+	public float getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
 

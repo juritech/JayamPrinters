@@ -28,7 +28,7 @@ public class Prnt06OrdDtls {
 	@Column(name = "PRNT06_QTY")
 	private Integer prnt06Qty;
 	@Column(name = "PRNT06_AMT")
-	private Integer prnt06Amt;
+	private Float prnt06Amt;
 	@Column(name = "PRNT06_CRT_DT", columnDefinition = "Date default getDate()")
 	private Date prnt06CrtDt;
 	@Column(name = "PRNT06_CRT_UR")
@@ -78,11 +78,11 @@ public class Prnt06OrdDtls {
 		this.prnt06Qty = prnt06Qty;
 	}
 
-	public Integer getPrnt06Amt() {
+	public Float getPrnt06Amt() {
 		return prnt06Amt;
 	}
 
-	public void setPrnt06Amt(Integer prnt06Amt) {
+	public void setPrnt06Amt(Float prnt06Amt) {
 		this.prnt06Amt = prnt06Amt;
 	}
 

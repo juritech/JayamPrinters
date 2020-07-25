@@ -5,7 +5,7 @@ public class PrintBindVo {
 	private int bindId;
 	private String bindType;
 	private String bindSize;
-	private int bindAmt;
+	private float bindAmt;
 	private boolean errFlg = false;
 	private String msg = "";
 
@@ -33,11 +33,11 @@ public class PrintBindVo {
 		this.bindSize = bindSize;
 	}
 
-	public int getBindAmt() {
+	public float getBindAmt() {
 		return bindAmt;
 	}
 
-	public void setBindAmt(int bindAmt) {
+	public void setBindAmt(float bindAmt) {
 		this.bindAmt = bindAmt;
 	}
 

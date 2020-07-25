@@ -7,4 +7,6 @@ import com.juri.printing.entity.Prnt03RoleMstr;
 @Repository
 public interface Prnt03RoleMstrDao extends JpaRepository<Prnt03RoleMstr, Long>{
 
+	Prnt03RoleMstr findByPrnt03RoleNme(String role);
+
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.juri.printing.entity.Prnt02Bind;
 
 @Repository
-public interface Prnt02BindDao extends JpaRepository<Prnt02Bind, Integer>{
+public interface Prnt02BindDao extends JpaRepository<Prnt02Bind, Long>{
 
 	@Query("select e from Prnt02Bind e where e.prnt02BindType = :bindType and e.prnt02Size = :bindSize")
 	Prnt02Bind findByPrnt02BindTypeAndPrnt02Size(@Param("bindType") String bindType,@Param("bindSize") String bindSize);
